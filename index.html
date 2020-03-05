@@ -99,7 +99,7 @@
     </div>
     <p>Analysis of the MCMC-based ML learning process reveals two axes which govern each update of the model parameters. These axes are 1) the energy difference between data samples and MCMC samples (a negative difference indicates that data samples are more likely than MCMC samples, and a positive difference indicates the opposite) and 2) the convergence of MCMC samples with respect to the current model steady-state. All stable learning outcomes exhibit oscillation along the first axis, meaning that data samples and MCMC samples frequently exchange the role being more likely or less likely. All prior implementations fall exclusively on the non-convergent side of the second axis throughout training, despite the fact that informative initialization methods such as PCD are used with the justification that these methods facilitate convergence. Our main experimental contributions are: 1) the first non-convergent learning method with purely noise-initialized MCMC, and 2) the first convergent ConvNet potentials with realistic long-run MCMC samples. Our diagnosis and contributions are summarized in Figure 2.</p>
     <div class="figure">
-        <embed src="./figure/idea6.pdf" width="500" />
+        <image src="./figure/idea6.png" width="600">
         <p class="caption"><b>Figure 2:</b> Two axes that govern each update of MCMC-based ML learning, and our contributions along the axes.</p>
     </div>
     
@@ -108,14 +108,14 @@
     <h3>Experiment 1: Learning Outcomes for 2D Toy Data</h3>
     <p>We illustrate the distinction between convergent and non-convergent outcomes for 2D densities in Figure 3. The short-run MCMC densities used in training (obtained via kernel density estimation) closely match the ground truth for both convergent and non-convergent outcomes. However, the actual energy function learned by the non-convergent model is sharply concentrated and inaccurrate, while the energy function from convergent learning closely matches the ground truth.</p>
     <div class="figure">
-        <embed src="./figure/toy_experiment.pdf" width="500" />
+        <image src="./figure/toy_experiment.png" width="600">
         <p class="caption"><b>Figure 3:</b> Illustration of non-convergent and convergent learning outcomes for 2D toy data.</p>
     </div>
 
     <h3>Experiment 2: Learning Outcomes for Image Data</h3>
     <p>The same distinction between non-convergent and convergent learning can be observed for energy functions of high-dimensional image data, as shown in Figure 4. The short-run MCMC samples of both non-convergent and convergent models closely resemble the training data. However, long-run MCMC samples of the non-convergent model are oversaturated, while long-run samples of a convergent model are realistic and similar to short-run samples. Convergent results from two different kinds of networks are presented.</p>
     <div class="figure">
-        <embed src="./figure/conv_ml.pdf" width="500" />
+        <image src="./figure/conv_ml.png" width="600">
         <p class="caption"><b>Figure 4:</b> Illustration of non-convergent and convergent learning outcomes for the Oxford Flowers 102 dataset.</p>
     </div>
     
